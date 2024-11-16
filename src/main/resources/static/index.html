@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vulnerable Java Application - Database Console</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .card {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .button {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #2980b9;
+        }
+        code {
+            background: #f8f9fa;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vulnerable Java Application - Database Console</h1>
+        
+        <div class="warning">
+            <strong>⚠️ Warning:</strong> This is a deliberately vulnerable application for security testing and educational purposes.
+            Do not use in production!
+        </div>
+
+        <div class="card">
+            <h2>H2 Database Console</h2>
+            <p>Click below to access the H2 Console:</p>
+            <a href="/h2-console" class="button" target="_blank">Open H2 Console</a>
+        </div>
+
+        <div class="card">
+            <h2>Connection Details</h2>
+            <table>
+                <tr>
+                    <th>Setting</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>JDBC URL</td>
+                    <td><code>jdbc:h2:~/vulndb</code></td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td><code>sa</code></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><code>password</code></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>Available Tables</h2>
+            <ul>
+                <li><strong>users</strong> - User accounts and profile data</li>
+                <li><strong>cache</strong> - System cache entries</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Sample Queries</h2>
+            <pre><code>-- View all users
+SELECT * FROM users;
+
+-- View cache entries
+SELECT * FROM cache;
+
+-- Find user by username
+SELECT * FROM users WHERE username = 'admin';</code></pre>
+        </div>
+    </div>
+</body>
+</html>
