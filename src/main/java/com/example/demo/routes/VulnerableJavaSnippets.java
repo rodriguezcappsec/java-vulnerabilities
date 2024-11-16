@@ -38,7 +38,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @Controller
 @RequestMapping("/api")
-public class VulnerableJavaClasses {
+public class VulnerableJavaSnippets {
 
     private static final String DB_URL = "jdbc:h2:file:./data/vulndb;MODE=MySQL";
     private static final String DB_USER = "sa";
